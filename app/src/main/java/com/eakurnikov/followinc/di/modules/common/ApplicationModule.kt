@@ -1,4 +1,4 @@
-package com.eakurnikov.followinc.di.modules
+package com.eakurnikov.followinc.di.modules.common
 
 import android.content.Context
 import com.eakurnikov.followinc.app.FollowIncApp
@@ -17,5 +17,5 @@ interface ApplicationModule {
 
     @Binds
     @ApplicationScope
-    fun bindsContext(app: FollowIncApp): Context
+    fun bindContext(app: FollowIncApp): Context
 }

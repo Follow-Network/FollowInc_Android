@@ -1,4 +1,4 @@
-package com.eakurnikov.followinc.di.modules
+package com.eakurnikov.followinc.di.modules.common
 
 import android.util.Log
 import com.eakurnikov.followinc.di.annotations.ApplicationScope

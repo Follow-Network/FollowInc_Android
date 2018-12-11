@@ -1,4 +1,4 @@
-package com.eakurnikov.followinc.di.modules
+package com.eakurnikov.followinc.di.modules.common
 
 import com.eakurnikov.followinc.data.network.api.PostApi
 import com.eakurnikov.followinc.di.annotations.ApplicationScope

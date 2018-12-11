@@ -1,4 +1,4 @@
-package com.eakurnikov.followinc.di.modules
+package com.eakurnikov.followinc.di.modules.common
 
 import android.arch.persistence.room.Room
 import android.content.Context

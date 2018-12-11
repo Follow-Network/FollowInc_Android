@@ -1,4 +1,4 @@
-package com.eakurnikov.followinc.vm
+package com.eakurnikov.followinc.vm.start
 
 import com.eakurnikov.followinc.data.db.entities.Post
 import com.eakurnikov.followinc.data.repos.posts.PostRepository
@@ -13,7 +13,7 @@ import javax.inject.Inject
  * Created by eakurnikov on 04.12.2018.
  */
 
-class MainVm @Inject constructor(private val postRepo: PostRepository) : BaseVm() {
+class StartVm @Inject constructor(private val postRepo: PostRepository) : BaseVm() {
 
     var postsSubject = BehaviorSubject.createDefault<Resource<List<Post>>>(Resource.loading(null))
 

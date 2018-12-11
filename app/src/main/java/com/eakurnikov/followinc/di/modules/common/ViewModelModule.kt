@@ -1,9 +1,10 @@
-package com.eakurnikov.followinc.di.modules
+package com.eakurnikov.followinc.di.modules.common
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import com.eakurnikov.followinc.di.annotations.ViewModelKey
-import com.eakurnikov.followinc.vm.MainVm
+import com.eakurnikov.followinc.vm.start.StartVm
+import com.eakurnikov.followinc.vm.auth.AuthVm
 import com.eakurnikov.followinc.vm.base.ViewModelFactory
 import dagger.Binds
 import dagger.Module
@@ -20,9 +21,14 @@ interface ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(MainVm::class)
-    fun bindsMainViewModel(mainVm: MainVm): ViewModel
+    @ViewModelKey(StartVm::class)
+    fun bindMainViewModel(startVm: StartVm): ViewModel
 
     @Binds
-    fun bindsViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
+    @IntoMap
+    @ViewModelKey(AuthVm::class)
+    fun bindAuthViewModel(mainVm: AuthVm): ViewModel
+
+    @Binds
+    fun bindViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
 }

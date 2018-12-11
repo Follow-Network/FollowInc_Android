@@ -1,4 +1,4 @@
-package com.eakurnikov.followinc.di.modules
+package com.eakurnikov.followinc.di.modules.common
 
 import com.eakurnikov.followinc.di.annotations.ApplicationScope
 import com.eakurnikov.followinc.data.repos.posts.PostRepository
@@ -17,5 +17,5 @@ interface RepositoriesModule {
 
     @Binds
     @ApplicationScope
-    fun bindsPostRepository(impl: PostsRepositoryImpl): PostRepository
+    fun bindPostRepository(impl: PostsRepositoryImpl): PostRepository
 }

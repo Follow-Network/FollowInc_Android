@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FollowInc</string>
+
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="log_in">Войти</string>
+</resources>

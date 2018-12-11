@@ -2,7 +2,10 @@ package com.eakurnikov.followinc.di.components
 
 import com.eakurnikov.followinc.app.FollowIncApp
 import com.eakurnikov.followinc.di.annotations.ApplicationScope
-import com.eakurnikov.followinc.di.modules.*
+import com.eakurnikov.followinc.di.modules.common.ActivityBuilderModule
+import com.eakurnikov.followinc.di.modules.common.ApplicationModule
+import com.eakurnikov.followinc.di.modules.common.RepositoriesModule
+import com.eakurnikov.followinc.di.modules.common.ViewModelModule
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
