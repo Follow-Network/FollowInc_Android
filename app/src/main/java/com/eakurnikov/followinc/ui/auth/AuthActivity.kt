@@ -7,6 +7,7 @@ import com.eakurnikov.followinc.R
 import com.eakurnikov.followinc.ui.base.BaseActivity
 import com.eakurnikov.followinc.vm.auth.AuthVm
 import com.eakurnikov.followinc.vm.base.BaseVm
+import kotlinx.android.synthetic.main.activity_auth.*
 
 /**
  * Created by eakurnikov on 10.12.2018.
@@ -29,5 +30,8 @@ class AuthActivity: BaseActivity<AuthVm>() {
         setContentView(R.layout.activity_auth)
 
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(AuthVm::class.java)
+
+        authToolbar.setNavigationOnClickListener { finish() }
     }
+
 }
