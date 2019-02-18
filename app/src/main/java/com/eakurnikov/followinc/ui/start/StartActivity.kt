@@ -16,30 +16,6 @@ class StartActivity : BaseActivity<StartVm>() {
 
     override lateinit var viewModel: StartVm
 
-//    private val onPosts = object : DisposableObserver<Resource<List<Post>>>() {
-//        override fun onComplete() {
-//        }
-//
-//        override fun onNext(resource: Resource<List<Post>>) {
-//            when (resource.status) {
-//                Resource.Status.SUCCESS -> {
-//                    val posts = resource.data?.toString()
-//                    tv.text = posts
-//                }
-//                Resource.Status.LOADING -> {
-//                    tv.text = "Loading..."
-//                }
-//                Resource.Status.ERROR -> {
-//                    tv.text = "ERROR :("
-//                }
-//            }
-//        }
-//
-//        override fun onError(e: Throwable) {
-//            Toast.makeText(this@StartActivity, e.message, Toast.LENGTH_LONG).show()
-//        }
-//    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
@@ -48,23 +24,24 @@ class StartActivity : BaseActivity<StartVm>() {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(StartVm::class.java)
     }
 
+    override fun initViews(isFirstTime: Boolean) {
+    }
+
     override fun onStart() {
         super.onStart()
 
         signUpBtn.setOnClickListener {
-            AuthActivity.start(this@StartActivity)
+            AuthActivity.startWithSignUp(
+                this@StartActivity
+            )
         }
 
         logInBtn.setOnClickListener {
-            AuthActivity.start(this@StartActivity)
+            AuthActivity.startWithLogIn(
+                this@StartActivity
+            )
         }
     }
 
-//    override fun subscribe() {
-//        disposables.add(
-//            viewModel.postsSubject
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribeWith(onPosts)
-//        )
-//    }
+
 }

@@ -7,18 +7,15 @@ import android.view.ViewGroup
 import com.eakurnikov.followinc.R
 import com.eakurnikov.followinc.ui.base.BaseFragment
 
-/**
- * Created by eakurnikov on 12.12.2018.
- */
+class AuthErrorFragment: BaseFragment() {
 
-class SignUpFragment: BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(
-            R.layout.fragment_sign_up,
+            R.layout.fragment_auth_error,
             container,
             false
         )

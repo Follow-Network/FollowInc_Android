@@ -20,6 +20,8 @@ abstract class BaseActivity<T: BaseVm>: DaggerAppCompatActivity() {
 
     protected abstract var viewModel: T
 
+    protected abstract fun initViews(isFirstTime: Boolean)
+
     override fun onStart() {
         super.onStart()
 

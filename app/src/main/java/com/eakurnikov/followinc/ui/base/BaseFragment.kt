@@ -6,4 +6,6 @@ import dagger.android.support.DaggerFragment
  * Created by eakurnikov on 12.12.2018.
  */
 
-abstract class BaseFragment: DaggerFragment()
+abstract class BaseFragment: DaggerFragment() {
+
+}

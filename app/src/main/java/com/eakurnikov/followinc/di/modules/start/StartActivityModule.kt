@@ -1,5 +1,6 @@
-package com.eakurnikov.followinc.di.modules.auth
+package com.eakurnikov.followinc.di.modules.start
 
+import com.eakurnikov.followinc.di.modules.auth.AuthModule
 import dagger.Module
 
 /**
